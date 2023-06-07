@@ -1,0 +1,250 @@
+
+.tt-wrap {
+    margin: 10px;
+    text-align: center;
+}
+
+.tt-map-container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    position: relative;
+}
+
+.tt-map { width: 100%; }
+
+.tt-wrap::after{
+    clear:both;
+}
+
+.tt-wrap h2 {
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.tt-box {
+    display: inline-block;
+    position: relative;
+    width: 11.5vw; 
+    height: 11.5vw;
+    border-right: 1px solid transparent;
+}
+
+.tt-boxInner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.tt-boxInner img {
+    width: 100%;
+    height: 100%;
+}
+
+.tt-box a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1em;
+    background: rgba(0,0,0,0.44);
+    color: #eaf5fc;
+    text-decoration: none;
+    padding: .3em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tt-box a:focus,
+.tt-box:hover a {
+    background: rgba(0, 0, 0, 0.6) !important;
+    color: #fff;
+}
+
+.tt-box:hover .tt-boxInner img {
+    width: 105%;
+    height: 105%;
+    max-width: 105%;
+    max-height: 105%;
+}
+
+
+.tt-box img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+.tt-box a span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tt-map-is-mobile { display: none; }
+.tt-map-is-desktop { display: block; }
+
+@media only screen and (max-width : 480px) {
+
+    /* Smartphone view: 1 tile */
+    .tt-box {
+        width: 100%;
+        height: 100vw;
+        margin: 5px auto;
+    }
+
+    .tt-map-is-mobile{ display: block !important; }
+    .tt-map-is-desktop { display: none; }
+}
+
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+
+    /* Tablet view: 2 tiles */
+    .tt-box {
+        width: 23.6vw;
+        height: 23.6vw;
+    }
+}
+
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+
+    /* Small desktop / ipad view: 3 tiles */
+    .tt-box {
+        width: 23.6vw;
+        height: 23.6vw;
+    }
+}
+
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+
+    /* Medium desktop: 4 tiles */
+    .tt-box {
+        width: 23.5vw;
+        height: 23.5vw;
+    }
+}
+
+.single-etappen .entry-footer { display: none !important;}
+.archive .entry-header .tt-left > *,
+.single-etappen .entry-content > * { 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--responsive--alignwide-width) !important;
+}
+
+body {
+    background-color: #eaf5fc;
+}
+
+#mapContainer,
+.tt-map {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 50vh;
+    max-height: 50vh;
+    margin-left: 0;
+    margin-right: 0;
+}
+#map
+{
+    max-width: 65% !important;
+}
+.tt-hidden {
+    display: none;
+}
+
+.tt-left { text-align: left;}
+
+.tt-overlay {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 500;
+    padding: 10px;
+    background-color: rgba(255,255,255, 0.9);
+    width: 35%;
+    overflow: auto;
+}
+
+.tt-overlay-etappe {
+    display: block;
+    padding: 10px 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tt-overlay-etappe .tt-mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.tt-overlay-etappe-current,
+.tt-overlay-etappe:hover
+{
+    background-color: #eaf5fc;
+}
+
+.tt-overlay-etappe:not(:last-child)
+{
+    border-bottom: 1px solid black;
+}
+
+.tt-overlay select { width: 100%; display: block; margin-bottom: 10px;}
+
+.tt-hide, .tt-tour-name { display: none !important; }
+
+.post-type-archive-etappen .site-main {
+    margin-top: 0;
+    padding-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.post-type-archive-etappen .site-header { 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.post-type-archive-etappen #mapContainer,
+.post-type-archive-etappen .tt-map
+{
+    height: 100vh !important;
+    max-height: 100vh !important;
+}
+
+.etappen-template-default  #mapContainer,
+.etappen-template-default .tt-map
+{
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.singular .entry-header
+{
+    border-bottom: 0px !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+
+.site .tt-wrap
+{
+    max-width: var(--responsive--alignwide-width);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}

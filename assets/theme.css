@@ -1,0 +1,44 @@
+
+.site .site-header
+{
+    background-color: #ffffff; 
+    box-shadow: 0 3px 5px 0 rgb(0 1 1 / 10%);
+    padding: 1em 3em;
+    margin: 0;
+    max-width: 100vw;
+}
+
+.site .site-logo
+{
+    margin: 0;
+}
+
+.site-content
+{
+    margin-top: 1.5em;
+}
+
+
+.etappen header,
+.post-thumbnail, 
+.entry-content .wp-audio-shortcode, 
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce), 
+*[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce), 
+.default-max-width {
+    max-width: var(--responsive--alignwide-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.singular .entry-title
+{
+    font-size: 3em;
+}
+
+.post-thumbnail {
+    display: none;
+}
+
+.tt-nomargin-top {
+    margin-top: -60px !important;
+}
