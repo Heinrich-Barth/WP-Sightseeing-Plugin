@@ -11,6 +11,6 @@ Please do not just take this plugin but evaluate it if it meets your requirement
 
 This plugin is not going to be developed actively but feel free to fork it.
 
-## Liraries
+## Libraries
 
 This plugin uses [OpenStreetMap](https://www.openstreetmap.org) and [Leaflet](https://leafletjs.com/) via `https://unpkg.com/leaflet@1.8.0`. *Please checkout their respective copyright pages as well.*
